@@ -1,0 +1,68 @@
+.checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  flex-shrink: 0;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  margin: 0;
+  border-radius: 50%;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+/* кольцо, а при checked закрашенный круг */
+.checkbox::before {
+  content: "";
+  position: absolute;
+  inset: calc((var(--checkbox-size) - var(--checkbox-circle)) / 2);
+  border: 1.6px solid var(--color-text-muted);
+  border-radius: 50%;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.checkbox:checked::before {
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+}
+/* галочка: уголок из двух границ, повёрнутый на 45° */
+/* Галочка через SVG маску */
+.checkbox::after {
+  content: "";
+  position: absolute;
+  inset: 0; /* Растягиваем на весь размер родителя */
+
+  /* Цвет галочки берем из переменной цвета фона (обычно это белый) */
+  background-color: var(--color-on-button);
+
+  /* Используем SVG как маску */
+  -webkit-mask-image: url("../../assets/icons/Check.svg");
+  mask-image: url("../../assets/icons/Check.svg");
+
+  /* Размер и позиционирование */
+  -webkit-mask-size: 35%; /* Размер галочки относительно круга */
+  mask-size: 35%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  opacity: 0;
+  transform: scale(0.6); /* Начальный масштаб для анимации */
+  transition: opacity 0.15s, transform 0.15s;
+}
+
+.checkbox:checked::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.checkbox:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.checkbox:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

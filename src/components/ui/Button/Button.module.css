@@ -1,0 +1,81 @@
+.button {
+  height: var(--button-height);
+  padding: var(--space-3);
+  border: none;
+  font-size: var(--text-body);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--button-gap);
+}
+
+.button > svg {
+  flex-shrink: 0;
+  max-width: none;
+  width: var(--button-icon-size, var(--icon-xs));
+  height: var(--button-icon-size, var(--icon-xs));
+}
+
+.button[data-icon="end"] {
+  padding-inline: var(--space-5) var(--space-3);
+} /* 20 12 */
+
+.button[data-icon="start"] {
+  padding-inline: var(--space-3) var(--space-5);
+} /* 12 20 */
+
+.button[data-icon="only"] {
+  width: var(--button-icon-size, var(--icon-md));
+  height: var(--button-icon-size, var(--icon-md));
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.button[data-icon="only"] > svg {
+  width: var(--icon-md);
+  height: var(--icon-md);
+}
+
+.primary {
+  background-color: var(--color-button);
+  color: var(--color-on-button);
+}
+
+.secondary {
+  background-color: var(--color-button-secondary);
+  color: var(--color-on-button-secondary);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--color-text-muted);
+}
+.ghost:hover {
+  color: var(--color-text);
+}
+
+/* голая иконка без квадрата 43×43 */
+.ghost[data-icon="only"] {
+  width: auto;
+  height: auto;
+  padding: 0;
+}
+
+.button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.full-width {
+  width: 100%;
+}

@@ -1,0 +1,15 @@
+.section-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header,
+.counter {
+  font-size: var(--text-caption);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}

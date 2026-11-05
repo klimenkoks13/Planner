@@ -1,0 +1,59 @@
+.sidebar {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: var(--sidebar-width);
+  padding-block: var(--space-7); /* 48 сверху и снизу */
+  background: var(--color-sidebar);
+}
+
+.logo {
+  margin-bottom: var(--space-7); /* 48 до первого пункта */
+  color: var(--color-sidebar-icon-active);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6); /* 24, вместе с иконкой 28 даёт шаг 52 */
+}
+
+.link {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-sidebar-icon);
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.link:hover,
+.link[aria-current="page"] {
+  color: var(--color-sidebar-icon-active);
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.logout {
+  --button-icon-size: 28px;
+  margin-top: auto;
+  color: var(
+    --color-sidebar-icon
+  ); /* перебивает серый ghost под тёмный сайдбар */
+}
+.logout:hover {
+  color: var(--color-sidebar-icon-active);
+}

@@ -1,0 +1,28 @@
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eyebrow {
+  font-size: var(--text-subtitle);
+  font-weight: var(--font-weight-light);
+  letter-spacing: var(--letter-spacing);
+  color: var(--color-text-muted);
+}
+
+.title {
+  font-size: var(--text-title);
+  line-height: var(--line-height-title);
+  font-weight: var(--font-weight-light);
+  letter-spacing: var(--letter-spacing);
+  color: var(--color-text);
+}
+
+.action-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+}

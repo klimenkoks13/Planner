@@ -1,0 +1,14 @@
+.input-with-submit {
+  display: flex;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+.input-with-submit > input {
+  flex: 1;
+  min-width: 0;
+}
+
+.input-with-submit > button {
+  flex-shrink: 0;
+}
