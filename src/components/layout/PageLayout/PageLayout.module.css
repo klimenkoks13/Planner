@@ -1,5 +1,0 @@
-main {
-  min-height: 100vh;
-  padding: var(--page-padding);
-  padding-left: calc(var(--page-padding) + var(--sidebar-width));
-}

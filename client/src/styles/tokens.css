@@ -1,0 +1,115 @@
+:root {
+  --sidebar-width: 68px;
+  --page-padding: 48px; /* 68 + 48 */
+  --page-header-gap: 16px; /* заголовок */
+  --grid-gap: 16px;
+  --content-top: 124px; /* начало карточек */
+
+  /* шрифт */
+  --font-family: "Inter", sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --letter-spacing: -0.02em; /* везде одинаково: 14px → -0.28px, 16 → -0.32, 28 → -0.56, 48 → -0.96 */
+
+  /* размеры текста */
+  --text-caption: 14px; /* подписи капсом: TASKS, HABITS, UPCOMING, счётчики */
+  --text-body: 16px; /* основной текст, инпуты, кнопки */
+  --text-subtitle: 20px; /* год над заголовком */
+  --text-title: 28px; /* «Sunday, June 21» */
+  --text-display: 48px; /* «75%» */
+
+  /* межстрочный интервал (где задан явно) */
+  --line-height-body: 24px; /* элементы расписания */
+  --line-height-title: 36px;
+  --line-height-display: 56px;
+  /* для caption и body в остальных местах line-height: normal */
+
+  /* шкала отступов (заменяет прежние --space-1…5, в ней не было 4 и 24) */
+  --space-1: 4px; /* между ячейками календаря, чипами */
+  --space-2: 8px; /* gap иконка–текст, подпись–поле, поле–кнопка */
+  --space-3: 12px; /* padding со стороны иконки в кнопке, padding инпута, gap между цветовыми кружками */
+  --space-4: 16px; /* между карточками, между полями формы */
+  --space-5: 20px; /* padding карточки и боковой панели, padding кнопки со стороны текста */
+  --space-6: 24px; /* зазор между иконками навигации (шаг 52 = 28 + 24) */
+  --space-7: 48px; /* от sidebar до контента */
+
+  /* кнопка */
+  --button-height: 44px;
+  --button-gap: var(--space-2);
+
+  --task-item-height: 44px;
+  --habit-item-height: 44px;
+
+  /* checkbox */
+  --checkbox-size: 28px;
+  --checkbox-circle: 20px;
+
+  /* радиусы */
+  --radius-sm: 12px; /* строки задач, инпуты, кнопки */
+  --radius-md: 16px; /* заметки, строки привычек */
+  --radius-lg: 20px; /* карточки */
+
+  /* высоты контролов */
+  --control-height: 44px; /* инпут, кнопка */
+  --row-height: 44px; /* строка задачи или привычки */
+
+  /* размеры иконок */
+  --icon-xs: 16px; /* streak */
+  --icon-sm: 20px; /* корзина */
+  --icon-md: 24px; /* стрелка в кнопке */
+  --icon-lg: 28px; /* навигация, чекбокс */
+
+  --color-sidebar-icon: rgba(255, 255, 255, 0.3);
+  --color-sidebar-icon-active: #ffffff;
+
+  --color-delete-icon: rgba(0, 0, 0, 0.3);
+
+  /* поверхности */
+  --color-bg: #f5f5f5;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f7f7f7;
+  --color-sidebar: #0d0d0d;
+  --color-field: rgba(0, 0, 0, 0.03);
+  --color-task-done: rgba(0, 0, 0, 0.1);
+
+  /* текст */
+  --color-text: #000000;
+  --color-text-muted: rgba(0, 0, 0, 0.5);
+  --color-text-done: rgba(0, 0, 0, 0.5);
+
+  /* действия и акцент */
+  --color-button: #0d0d0d;
+  --color-on-button: #ffffff;
+  --color-button-secondary: #ffffff;
+  --color-on-button-secondary: rgba(0, 0, 0, 0.5);
+
+  --color-accent: #f95b06;
+
+  /* тени */
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  /* цвета событий и проектов (одинаковые в обеих темах) */
+  --color-event-orange: #ffb28e;
+  --color-event-green: #8fc384;
+  --color-event-blue: #a5cae8;
+  --color-event-red: #da8585;
+  --color-event-purple: #dcb8e2;
+  /* --color-event-yellow: /* TODO: снять с чипа в календаре */
+}
+
+[data-theme="dark"] {
+  --color-bg: #0d0d0d;
+  --color-surface: rgba(255, 255, 255, 0.03);
+  --color-surface-muted: rgba(255, 255, 255, 0.04);
+  --color-sidebar: rgba(255, 255, 255, 0.04);
+  --color-field: rgba(255, 255, 255, 0.04);
+  --color-task-done: rgba(255, 255, 255, 0.02);
+
+  --color-text: #ffffff;
+  --color-text-muted: rgba(255, 255, 255, 0.5);
+  --color-text-done: rgba(255, 255, 255, 0.3);
+
+  --color-button: #ffffff;
+  --color-on-button: #0d0d0d;
+  --color-accent: #e56622;
+}
